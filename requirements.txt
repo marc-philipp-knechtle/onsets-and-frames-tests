@@ -1,0 +1,49 @@
+jupyter
+
+# wheel
+# cython
+
+pyfluidsynth
+pretty_midi
+python-rtmidi
+
+# magenta requirements + sub-dependencies of magenta
+magenta==0.3.18
+tensorflow==1.15.3
+# avoid wheel installation of this package because it leads to duplicate errors with the music.proto file
+--no-binary note-seq==0.0.0
+
+# 3.6.1 did not work
+# 3.13 was also too old
+protobuf==3.19.6
+
+# old requirements needed to be fixed
+# apache-beam 2.48.0 requires protobuf<4.24.0
+apache-beam==2.14.0
+
+# Earlier attempts with python versions >3.6
+# # requirements for magenta==2.1.4
+# dm-sonnet
+# imageio
+# note-seq
+# pygtrie
+# scikit-image
+# sox
+# absl-py==1.2.0
+# librosa==0.7.2
+# matplotlib==3.5.2
+# # numba==0.49.1 = original magenta2.1.4 requirement, but fails to install
+# # 0.56.4 works on my machine for example
+# numba==0.49.1
+# # numpy==1.21.6 # unspecified numpy version because of newer tensorflow requirements
+# numpy
+# Pillow==9.2.0
+# pretty-midi==0.2.9
+# # magenta 2.1.4 has requirement python-rtmidi==1.1.2, but you have python-rtmidi 1.5.0.
+# scipy==1.7.3
+# # tensorflow==2.9.1 = original magenta 2.1.4 requirement
+# tensorflow>2.9.1
+# tensorflow-datasets==4.6.0
+# tensorflow-probability==0.17.0
+# wheel==0.37.1
+
